@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fdf4ee;
+    background-image: url("https://live.staticflickr.com/135/321799805_59164fd839_b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+li {
+    cursor: pointer;
+}
+
+/*HOMEPAGE*/
+.homepage-content  {
+    margin-top: 15px;
+    height: 88vh;
+    max-width: 80%;
+    min-width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    padding: 40px 150px;
+    background-color: #fdf4ee;
+    border-radius: 4px;
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.text-div h3 {
+    text-align: center;
+    color: #3d44a5;
+    font-family: 'Sacramento', cursive;
+    font-size: 4.5em;
+}
+
+.text-div h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.text-div p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.image-div {
+    position: relative;
+}
+
+.image-div img {
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#image1 {
+    width: 400px;
+    height: 400px;
+}
+
+#image2 {
+    width: 300px;
+    height: 300px;
+    object-position: 0 50%;
+    top: 250px;
+    right: 0;
+}
+
+@media (max-width: 1200px) {
+    #image1 {
+        width: 300px;
+        height: 300px;
+    }
+    
+    #image2 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) {
+    .homepage-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 150px 0 150px;
+    }
+
+    .homepage-content .text-div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homepage-content .text-div h3 {
+        font-size: 3.5em;
+    }
+    
+    .homepage-content .text-div h4 {
+        font-size: 1.2em;
+    }
+
+    .homepage-content .text-div p {
+        font-size: 0.8em;
+    }
+
+    .homepage-content .text-div button {
+        font-size: 0.8em;
+    }
+
+    .image-div {
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .image-div img {
+        object-fit: cover;
+        border-radius: 50%;
+        position: static;
+    }
+
+    #image1 {
+        width: 25vw;
+        height: 25vw;
+        margin-right: 20px;
+    }
+    
+    #image2 {
+        width: 25vw;
+        height: 25vw;
+    }
+}
